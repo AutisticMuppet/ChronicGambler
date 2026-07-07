@@ -1,7 +1,7 @@
 # ChronicGambler
 
 Chess was invented in India in around abouts the 6th century, introduced as a strategy game. Since then, it has become one of the most played games in the world.
-People that are good at chess are seen as intellegent in the public eye... yet slowly but surely, they eventually become bored without an academic rival for this strategy game, and I, Autistic_Muppet have found out the perfect way to sharpen the academic minds of the future as well as making chess more fun with something everyone loves...
+People that are good at chess are seen as intellegent in the public eye... yet slowly but surely, they eventually become bored without an academic rival for this strategy game, and I have found out the perfect way to sharpen the academic minds of the future as well as making chess more fun with something everyone loves...
 
 **What if we took Chess, and made apperance, ELO and winrates COMPLETELY USELESS?**
 
@@ -9,6 +9,8 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 
 **What if Chess was about Gambling?**
+
+What are you all giving me that look for?
 
 
 
