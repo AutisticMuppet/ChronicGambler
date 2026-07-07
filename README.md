@@ -17,3 +17,17 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 <img width="500" height="510" alt="jevil-deltarune-chaos-dance-around-rdpv53nwekocbzqo" src="https://github.com/user-attachments/assets/6e47f51b-df63-48d9-a7cd-37833d557d24" />
 
 
+ChronicGambler is not a very serious Chess bot. It is not meant to be the very best, or the very worst. 
+However, it is programmed to get close to both.
+Using the Lichess-bot base, I have spent countless hours reprogramming lines that use specific unique types of data that needs to be read by the config.yml.
+ChronicGambler will always keep you guessing due to the fact that it changes its ELO randomly each match, ranging from 500-2800. The bot tells you its ELO after a match, which makes it a game in itself to estimate and guess its approximate skill while playing.
+
+## What makes ChronicGambler Different?
+
+ChronicGambler does not run a homemade engine, instead opting to run Fairy-Stockfish 14. This was chosen over Stockfish 18 due to the wider skill range that the bot can display. The minimum ELO for Stockfish 18 that can be emitted is 1320, while 500 is the minimum for Fairy-Stockfish.
+
+As well as the randomisation of skill, ChronicGambler also has a custom command (!spinthewheel) that spoils the current ELO that it is playing at before a match is over.
+
+ChronicGambler also features result based messages, with the end result (The player winning, drawing or losing) changing the messages displayed at the end of a game (As well as telling them the ELO that it is playing at).
+
+Despite the fact that these things sound super easy, these changes took hours of programming and debuging due to its overall complexity, even though I have a very good knowledge of multiple languages (Not at all perfect, but at least very good.)
