@@ -43,3 +43,23 @@ As well as the randomisation of skill, ChronicGambler also has a custom command 
 ChronicGambler also features result based messages, with the end result (The player winning, drawing or losing) changing the messages displayed at the end of a game (As well as telling them the ELO that it is playing at).
 
 Despite the fact that these things sound super easy, these changes took hours of programming and debuging due to its overall complexity, even though I have a very good knowledge of multiple languages (Not at all perfect, but at least very good.)
+
+## Hosting ChronicGambler 
+
+ChronicGambler is currently being hosted 24/7 on an old gaming PC I found on the side of a road. The PC has 2GB of Ram, which proves that ChronicGambler is very lenient to run on most PC's. It is hosted with Ubuntu Server 24.04.
+
+Hosting was origionally a problem for me as I had no old PC to host on. So I looked towards a VPS.
+
+All VPS's were extremely weak, cost money or were out of storage.
+
+Honestly, just get an old PC for hosting stuff.
+
+Every 15 Minutes, ChronicGambler plays against a random bot (Programmed obviously), which can be watched on its profile as well as being open for games with users on Lichess.com at any time.
+
+
+## Credit / Special Thanks!
+
+BIG thanks to the Lichess devs for giving people an option to program something like this. Without them, this would literally be impossible.
+Also a big thanks to the Lichess Discord server, who helped me with issues and a few ideas and despite ChronicGambler not being super impressive, it was a technical nightmare to get working.
+
+
