@@ -12,6 +12,13 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 
 
+
+
+
+
+
+
+
 What are you all giving me that look for?
 
 
