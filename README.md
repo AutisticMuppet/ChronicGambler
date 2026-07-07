@@ -14,5 +14,6 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 ## What is the purpose of ChronicGambler?
 
-https://gifdb.com/images/high/jevil-deltarune-chaos-dance-around-rdpv53nwekocbzqo.webp
+<img width="500" height="510" alt="jevil-deltarune-chaos-dance-around-rdpv53nwekocbzqo" src="https://github.com/user-attachments/assets/6e47f51b-df63-48d9-a7cd-37833d557d24" />
+
 
