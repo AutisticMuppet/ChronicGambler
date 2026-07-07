@@ -7,12 +7,13 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 **What if no matter how good or bad an opponent is, they completely change their level of skill the very next game?**
 
- <img width="500" height="510" alt="image" src="https://github.com/user-attachments/assets/f90587b6-3253-4359-8c98-2b5cbc022798" />
-
-
-
-
 
 **What if Chess was about Gambling?**
+
+
+
+## What is the purpose of ChronicGambler?
+
+<img width="500" height="510" alt="gif" src="https://github.com/user-attachments/assets/0b751567-1103-4fc0-91ca-f7d1c030932b" />
 
 
