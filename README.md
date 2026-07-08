@@ -40,7 +40,7 @@ ChronicGambler does not run a homemade engine, instead opting to run Fairy-Stock
 
 As well as the randomisation of skill, ChronicGambler also has a custom command (!spinthewheel) that spoils the current ELO that it is playing at before a match is over.
 
-ChronicGambler also features result based messages, with the end result (The player winning, drawing or losing) changing the messages displayed at the end of a game (As well as telling them the ELO that it is playing at).
+ChronicGambler also features result based messages, with the end result (The player winning, drawing or losing) changing the messages displayed at the end of a game (As well as telling them the ELO that it is playing at) (Does not work perfectly right now, will fix that in the future)
 
 Despite the fact that these things sound super easy, these changes took hours of programming and debuging due to its overall complexity, even though I have a very good knowledge of multiple languages (Not at all perfect, but at least very good.)
 
