@@ -827,9 +827,9 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
                         game: model.Game) -> str:
     """Select a result-based greeting, falling back to the base greeting if needed."""
     result = game.result()
-    if result == "1/2-1/2":
+    if game.result == "1/2-1/2":
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif (game.is_white and result == "1-0" and game.white.name != "ChronicGambler") or (not game.is_white and result == "0-1" and game.white.name == "ChronicGambler"):
+    elif (game.is_white and result == "1-0" and game.white.name != "ChronicGambler") or (game.is_white and result == "0-1" and game.white.name == "ChronicGambler"):
         candidate_keys = [f"{base_key}_win", base_key]
     else:
         candidate_keys = [f"{base_key}_loss", base_key]
