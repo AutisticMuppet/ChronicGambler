@@ -1195,7 +1195,7 @@ def intro() -> str:
     .  // o\
     .  || ._)  ChronicGambler {__version__} on {platform.system()} {platform.release()}
     .  //__\
-    .  )___(   A randomised bot based off the origional liichess-bot.
+    .  )___(   A bot that plays at random ELO's. Based off the original lichess-bot Base.
     """
 
 
