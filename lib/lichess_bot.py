@@ -830,7 +830,7 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
     if game.result == "1/2-1/2":
         # ChronicGambler draws (The opponent cheated and still could not win.)
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
+    elif (game.is_white and game.result == "1-0") or (not game.is_white and game.result == "0-1"):
         # ChronicGambler wins (GG EZ)
         candidate_keys = [f"{base_key}_loss", base_key]
     else:
