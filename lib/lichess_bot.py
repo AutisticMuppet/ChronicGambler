@@ -825,14 +825,17 @@ def get_greeting(greeting: str, greeting_cfg: Configuration, keyword_map: defaul
 
 def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map: defaultdict[str, str],
                         game: model.Game) -> str:
-    """Select a result-based greeting, falling back to the base greeting if needed."""
-    result = game.result()
-    if game.result == "1/2-1/2":
+    "Send a greeting to the opponent based on results (THIS CAUSED ME SO MUCH PAIN TO PROGRAM GSVVAVJKAGVJDGYJVDYVGD)"
+
+    if result == "1/2-1/2":
+        # ChronicGambler draws (The opponent cheated and still could not win.)
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif (game.is_white and result == "1-0" and game.white.name != "ChronicGambler") or (game.is_white and result == "0-1" and game.white.name == "ChronicGambler"):
-        candidate_keys = [f"{base_key}_win", base_key]
-    else:
+    elif (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
+        # ChronicGambler wins (GG EZ)
         candidate_keys = [f"{base_key}_loss", base_key]
+    else:
+        # ChronicGambler loses (The game was rigged.)
+        candidate_keys = [f"{base_key}_win", base_key]
 
     for key in candidate_keys:
         greeting = get_greeting(key, greeting_cfg, keyword_map)
@@ -840,7 +843,6 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
             return greeting
 
     return ""
-
 
 def say_hello(conversation: Conversation, hello: str, hello_spectators: str, board: chess.Board) -> None:
     """Send the greetings to the chat rooms."""
