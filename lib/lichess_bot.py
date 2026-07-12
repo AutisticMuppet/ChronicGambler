@@ -831,11 +831,11 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
         # ChronicGambler draws (The opponent cheated and still could not win.)
         candidate_keys = [f"{base_key}_draw", base_key]
     elif (game.is_white and game.result == "1-0") or (not game.is_white and game.result == "0-1"):
+        # ChronicGambler loses (Rigged Game)
+        candidate_keys = [f"{base_key}_win", base_key]
+    else:
         # ChronicGambler wins (GG EZ)
         candidate_keys = [f"{base_key}_loss", base_key]
-    else:
-        # ChronicGambler loses (The game was rigged.)
-        candidate_keys = [f"{base_key}_win", base_key]
 
     for key in candidate_keys:
         greeting = get_greeting(key, greeting_cfg, keyword_map)
