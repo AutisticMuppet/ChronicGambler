@@ -5,10 +5,20 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 ### What if we took Chess, and made apperance, ELO and winrates COMPLETELY USELESS?
 
+You could play against an opponent with a completely inacurate ELO and inacurate stats. Someone that looks bad on paper, yet could still play at a grandmaster level?
+
+
+
 ### What if no matter how good or bad an opponent is, they completely change their level of skill the very next game?
+
+One game, an opponent could seem impossible to beat. The next game, you mate them in 10.
+
+
+
 
 ### What if Chess was about Gambling?
 
+No matter what happens, No matter how good you are, No matter how anything goes, it could change in an instant. Sometimes you win big, sometimes you lose everything...
 
 
 
@@ -18,8 +28,7 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 
 
-
-
+Yeah this was an awful idea.
 ## What is the purpose of ChronicGambler?
 
 <img width="500" height="510" alt="jevil-deltarune-chaos-dance-around-rdpv53nwekocbzqo" src="https://github.com/user-attachments/assets/6e47f51b-df63-48d9-a7cd-37833d557d24" />
