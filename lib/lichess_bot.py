@@ -832,15 +832,12 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
     if result == "1/2-1/2":
         candidate_keys = [f"{base_key}_draw", base_key]
     elif game.white.name == "ChronicGambler" or game.black.name == "ChronicGambler":
-        
         if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
-          
-            candidate_keys = [f"{base_key}_loss", base_key]
+            candidate_keys = [f"{base_key}_loss", base_key]   # ChronicGambler wins
         else:
-            
-            candidate_keys = [f"{base_key}_win", base_key]
+            candidate_keys = [f"{base_key}_win", base_key]    # Opponent wins
     else:
-        if (result == "1-0" and game.white.name != "ChronicGambler") or (result == "0-1" and game.black.name != "ChronicGambler"):
+        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
             candidate_keys = [f"{base_key}_win", base_key]
         else:
             candidate_keys = [f"{base_key}_loss", base_key]
@@ -851,7 +848,7 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
             return greeting
 
     return ""
-
+    
 def say_hello(conversation: Conversation, hello: str, hello_spectators: str, board: chess.Board) -> None:
     """Send the greetings to the chat rooms."""
     if len(board.move_stack) < 2:
