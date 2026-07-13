@@ -840,7 +840,7 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
             
             candidate_keys = [f"{base_key}_win", base_key]
     else:
-        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
+        if (result == "1-0" and game.white.name != "ChronicGambler") or (result == "0-1" and game.black.name != "ChronicGambler"):
             candidate_keys = [f"{base_key}_win", base_key]
         else:
             candidate_keys = [f"{base_key}_loss", base_key]
