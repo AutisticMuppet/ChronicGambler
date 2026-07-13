@@ -16,11 +16,7 @@ People that are good at chess are seen as intellegent in the public eye... yet s
 
 
 
-...
 
-
-
-What are you all giving me that look for?
 
 
 
@@ -36,7 +32,7 @@ ChronicGambler will always keep you guessing due to the fact that it changes its
 
 ## What makes ChronicGambler Different?
 
-ChronicGambler does not run a homemade engine, instead opting to run Fairy-Stockfish 14. This was chosen over Stockfish 18 due to the wider skill range that the bot can display. The minimum ELO for Stockfish 18 that can be emitted is 1320, while 500 is the minimum for Fairy-Stockfish.
+ChronicGambler does not run a homemade engine, instead opting to run Fairy-Stockfish 14. This was chosen over Stockfish 18 due to the wider skill range that the bot can display. The minimum ELO for Stockfish 18 that can be emitted is 1320, while 500 is the minimum for Fairy-Stockfish. Using Stockfish 18 is absolutely an option though and there is proof that it fully works.
 
 As well as the randomisation of skill, ChronicGambler also has a custom command (!spinthewheel) that spoils the current ELO that it is playing at before a match is over.
 
@@ -46,7 +42,7 @@ Despite the fact that these things sound super easy, these changes took hours of
 
 ## Hosting ChronicGambler 
 
-ChronicGambler is currently being hosted 24/7 on an old gaming PC I found on the side of a road. The PC has 2GB of Ram, which proves that ChronicGambler is very lenient to run on most PC's. It is hosted with Ubuntu Server 24.04.
+ChronicGambler is currently being hosted 24/7 (Whenever the WIFI works. My WIFI is Awful) on an old gaming PC I found on the side of a road. The PC has 2GB of Ram, which proves that ChronicGambler is very lenient to run on most PC's. It is hosted with Ubuntu Server 24.04.
 
 Hosting was origionally a problem for me as I had no old PC to host on. So I looked towards a VPS.
 
@@ -54,7 +50,7 @@ All VPS's were extremely weak, cost money or were out of storage.
 
 Honestly, just get an old PC for hosting stuff.
 
-Every 15 Minutes, ChronicGambler plays against a random bot (Programmed obviously), which can be watched on its profile as well as being open for games with users on Lichess.com at any time.
+Every 15 Minutes, ChronicGambler plays against a random bot, which can be watched on its profile as well as being open for games with users on Lichess.com at any time.
 
 
 ## Credit / Special Thanks!
