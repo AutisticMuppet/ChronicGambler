@@ -832,12 +832,14 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
     if result == "1/2-1/2":
         candidate_keys = [f"{base_key}_draw", base_key]
     elif game.white.name == "ChronicGambler" or game.black.name == "ChronicGambler":
-        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
-            candidate_keys = [f"{base_key}_loss", base_key]   # ChronicGambler wins
+        if (result == "1-0" and game.white.name == "ChronicGambler") or (result == "0-1" and game.black.name == "ChronicGambler"):
+            # ChronicGambler wins → opponent loses
+            candidate_keys = [f"{base_key}_loss", base_key]
         else:
-            candidate_keys = [f"{base_key}_win", base_key]    # Opponent wins
+            # Opponent wins
+            candidate_keys = [f"{base_key}_win", base_key]
     else:
-        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
+        if (result == "1-0" and game.white.name == game.me.name) or (result == "0-1" and game.black.name == game.me.name):
             candidate_keys = [f"{base_key}_win", base_key]
         else:
             candidate_keys = [f"{base_key}_loss", base_key]
