@@ -42,7 +42,7 @@ Despite the fact that these things sound super easy, these changes took hours of
 
 ## Hosting ChronicGambler 
 
-ChronicGambler is currently being hosted 24/7 (Whenever the WIFI works. My WIFI is Awful) on an old gaming PC I found on the side of a road. The PC has 2GB of Ram, which proves that ChronicGambler is very lenient to run on most PC's. It is hosted with Ubuntu Server 24.04.
+ChronicGambler is currently being hosted 24/7 (Whenever my WIFI works. My WIFI is absolute dog water) on an old gaming PC I found on the side of a road. The PC has 2GB of Ram, which proves that ChronicGambler is very lenient to run on most PC's. It is hosted with Ubuntu Server 24.04.
 
 Hosting was origionally a problem for me as I had no old PC to host on. So I looked towards a VPS.
 
