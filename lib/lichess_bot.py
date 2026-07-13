@@ -825,37 +825,21 @@ def get_greeting(greeting: str, greeting_cfg: Configuration, keyword_map: defaul
 
 
 
-
 def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map: defaultdict[str, str],
-                        game: model.Game) -> str:S
-    
-    if game.result == "1/2-1/2":
-    
+                        game: model.Game) -> str:
+    result = game.result() if callable(getattr(game, 'result', None)) else game.result
+
+    if result == "1/2-1/2":
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif (
-       
-        (game.white.name != "ChronicGambler" and game.result == "0-1")  # Previously "1-0" as white, now treat as win
-        or
-       
-        (game.black.name != "ChronicGambler" and game.result == "1-0")  # Previously "0-1" as black, now treat as win
-    ):
-       
-        candidate_keys = [f"{base_key}_loss", base_key]
-    elif (
-      
-        (game.white.name != "ChronicGambler" and game.result == "1-0")  # Previously "0-1" as white, now treat as loss
-        or
-        
-        (game.black.name != "ChronicGambler" and game.result == "0-1")  # Previously "1-0" as black
-    ):
-        
-        candidate_keys = [f"{base_key}_win", base_key]
+    elif (game.white.name == "ChronicGambler" or game.black.name == "ChronicGambler"):
+        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
+            # ChronicGambler wins
+            candidate_keys = [f"{base_key}_loss", base_key]
+        else:
+            # Opponent wins
+            candidate_keys = [f"{base_key}_win", base_key]
     else:
-       
-        if (
-            (game.white.name == "ChronicGambler" and game.result == "1-0") or
-            (game.black.name == "ChronicGambler" and game.result == "0-1")
-        ):
+        if (game.is_white and result == "1-0") or (not game.is_white and result == "0-1"):
             candidate_keys = [f"{base_key}_win", base_key]
         else:
             candidate_keys = [f"{base_key}_loss", base_key]
