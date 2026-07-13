@@ -829,21 +829,17 @@ def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map:
                         game: model.Game) -> str:
     result = game.result() if callable(getattr(game, 'result', None)) else game.result
 
-    if result == "1/2-1/2":
+    
+    
+    if (result == "1-0" and game.white.name == "ChronicGambler") or (result == "0-1" and game.black.name == "ChronicGambler"):
+            
+         candidate_keys = [f"{base_key}_loss", base_key]
+    
+    elif result == "1/2-1/2":
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif game.white.name == "ChronicGambler" or game.black.name == "ChronicGambler":
-        if (result == "1-0" and game.white.name == "ChronicGambler") or (result == "0-1" and game.black.name == "ChronicGambler"):
-            # ChronicGambler wins → opponent loses
-            candidate_keys = [f"{base_key}_loss", base_key]
-        else:
-            # Opponent wins
-            candidate_keys = [f"{base_key}_win", base_key]
     else:
-        if (result == "1-0" and game.white.name == game.me.name) or (result == "0-1" and game.black.name == game.me.name):
-            candidate_keys = [f"{base_key}_win", base_key]
-        else:
-            candidate_keys = [f"{base_key}_loss", base_key]
-
+        candidate_keys = [f"{base_key}_win", base_key]
+        
     for key in candidate_keys:
         greeting = get_greeting(key, greeting_cfg, keyword_map)
         if greeting:
