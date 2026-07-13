@@ -823,19 +823,42 @@ def get_greeting(greeting: str, greeting_cfg: Configuration, keyword_map: defaul
     return greeting_text.format_map(keyword_map)
 
 
+
+
+
 def get_result_greeting(base_key: str, greeting_cfg: Configuration, keyword_map: defaultdict[str, str],
-                        game: model.Game) -> str:
-    "Send a greeting to the opponent based on results (THIS CAUSED ME SO MUCH PAIN TO PROGRAM GSVVAVJKAGVJDGYJVDYVGD)"
+                        game: model.Game) -> str:S
     
     if game.result == "1/2-1/2":
-        # ChronicGambler draws (The opponent cheated and still could not win.)
+    
         candidate_keys = [f"{base_key}_draw", base_key]
-    elif (game.white.name != "ChronicGambler" and game.result == "1-0") or (game.black.name != "ChronicGambler" and game.result == "0-1"):
-        # ChronicGambler loses (Rigged Game)
+    elif (
+       
+        (game.white.name != "ChronicGambler" and game.result == "0-1")  # Previously "1-0" as white, now treat as win
+        or
+       
+        (game.black.name != "ChronicGambler" and game.result == "1-0")  # Previously "0-1" as black, now treat as win
+    ):
+       
+        candidate_keys = [f"{base_key}_loss", base_key]
+    elif (
+      
+        (game.white.name != "ChronicGambler" and game.result == "1-0")  # Previously "0-1" as white, now treat as loss
+        or
+        
+        (game.black.name != "ChronicGambler" and game.result == "0-1")  # Previously "1-0" as black
+    ):
+        
         candidate_keys = [f"{base_key}_win", base_key]
     else:
-        # ChronicGambler wins (GG EZ)
-        candidate_keys = [f"{base_key}_loss", base_key]
+       
+        if (
+            (game.white.name == "ChronicGambler" and game.result == "1-0") or
+            (game.black.name == "ChronicGambler" and game.result == "0-1")
+        ):
+            candidate_keys = [f"{base_key}_win", base_key]
+        else:
+            candidate_keys = [f"{base_key}_loss", base_key]
 
     for key in candidate_keys:
         greeting = get_greeting(key, greeting_cfg, keyword_map)
