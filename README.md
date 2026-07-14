@@ -40,7 +40,7 @@ Using the Lichess-bot base, I have spent countless hours reprogramming lines tha
 ChronicGambler will always keep you guessing due to the fact that it changes its ELO randomly each match, ranging from 500-2800. The bot tells you its ELO after a match, which makes it a game in itself to estimate and guess its approximate skill while playing. It adds an element of chaos that can cause massive ELO gains or severe ELO drops in certain senarios, and all this chaos would make you uncertain about your playstyle, uncertain about ChronicGambler's moves, motives and stratagies because you never exactly know how good or bad they are. It turns chess from a game about reading an opponent and addapting accordingly, into a game of isolated thoughts and educated guesses.
 
 ## What makes ChronicGambler Different?
-CHronicGambler plays at different ELO's each game, ranging from an ELO of 500 - 2800.
+
 ChronicGambler does not run a homemade engine, instead opting to run Fairy-Stockfish 14 (It would be HELL to program the over 100 DIFFERENT SKILL LEVELS that the bot plays at) . This was chosen over Stockfish 18 due to the wider skill range that the bot can display. The minimum ELO for Stockfish 18 that can be emitted is 1320, while 500 is the minimum for Fairy-Stockfish. Using Stockfish 18 is absolutely an option though and there is proof that it fully works.
 
 As well as the randomisation of skill, ChronicGambler also has a custom command (!spinthewheel) that spoils the current ELO that it is playing at before a match is over.
